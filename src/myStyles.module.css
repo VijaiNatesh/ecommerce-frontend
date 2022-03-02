@@ -22,11 +22,9 @@
 .register{
     text-align: center;
     border: 1px solid black; 
-    margin-left: 500px;     
-    margin-right: 500px; 
-    margin-top: 150px; 
+    margin: auto;
     padding: 50px;    
-    border-radius: 80%;  
+    border-radius: 22%;  
     background-color: darksalmon; 
 }
 .formlabel{ 
