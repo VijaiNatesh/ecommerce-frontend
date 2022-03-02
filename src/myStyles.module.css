@@ -1,6 +1,11 @@
+.bg{
+    background-color:rgb(110, 74, 6);    
+    border-radius: 10px;
+}
+
 .navBar{
     display: block;
-    background-color: aquamarine;
+    background-color: rgb(19, 20, 20);
     padding: 10px;
     margin: 10px;
     width: fit-content;
@@ -8,6 +13,7 @@
 .navLink{
     margin: 25px;
     text-decoration: none;
+    color: honeydew;
 }
 .itemCard{   
     border: 1px solid black;      
@@ -31,3 +37,9 @@
 .formlabel{ 
     padding: 10px;
 }
+.else{
+    color: honeydew;
+    margin: 10px;
+    padding: 10px;
+}
+

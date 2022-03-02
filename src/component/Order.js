@@ -19,14 +19,15 @@ function Order() {
     const user = localStorage.getItem('userAuthData')
     const userData = JSON.parse(user)
     return (
+        <div className = {styles.bg}>
         <div className = {styles.card}>
-            Order's Page <br/>
+           
             <button onClick = {() => dispatch(getOrder(userData._id))}>Click to view the Orders</button>
         <>
         {orderDetail ? orderDetail.map((order) => {
             return (
                 <>
-                <p>Bill: Rs. {order.bill}</p>
+                <p className = {styles.else}>Bill: Rs. {order.bill}</p>
                 <div className = {styles.itemCard}>
                 <p>{order.items.map((item) => {
                     return(
@@ -41,8 +42,9 @@ function Order() {
             )
         })            
          
-        : "No Orders Placed"}
+        : <p className = {styles.else}>No Orders Placed</p>}
         </>
+        </div>
         </div>
     )
 }

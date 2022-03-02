@@ -6,6 +6,7 @@ import styles from '../../src/myStyles.module.css'
 
 function Navigation() {
     const user = localStorage.getItem('userAuthData')
+    const userData = JSON.parse(user)
 
     return (
         <div>
@@ -21,6 +22,7 @@ function Navigation() {
                     <Nav.Link className = {styles.navLink} href='/cart'>Cart</Nav.Link>
                     <Nav.Link className = {styles.navLink} href='/order'>Order</Nav.Link>
                     <Nav.Link className = {styles.navLink} href='/logout'>Logout</Nav.Link>
+                    <Nav.Link className = {styles.navLink}>{userData.name}</Nav.Link>
                 </>
             }
 
