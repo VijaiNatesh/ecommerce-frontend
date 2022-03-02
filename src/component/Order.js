@@ -26,13 +26,13 @@ function Order() {
         {orderDetail ? orderDetail.map((order) => {
             return (
                 <>
-                <p>Bill: {order.bill}</p>
+                <p>Bill: Rs. {order.bill}</p>
                 <div className = {styles.itemCard}>
                 <p>{order.items.map((item) => {
                     return(
                         <>
                         <p>{item.name} {item.quantity} pieces</p>
-                        <p>Price: {item.price} per pieces</p>   
+                        <p>Price: Rs.{item.price} per pieces</p>   
                         </>                    
                     )
                 })} </p>  
