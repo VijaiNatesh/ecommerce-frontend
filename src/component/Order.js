@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { getOrder } from '../redux/action/orderAction';
+import styles from '../../src/myStyles.module.css'
 
 function Order() {
 
@@ -18,7 +19,7 @@ function Order() {
     const user = localStorage.getItem('userAuthData')
     const userData = JSON.parse(user)
     return (
-        <div>
+        <div className = {styles.card}>
             Order's Page <br/>
             <button onClick = {() => dispatch(getOrder(userData._id))}>Click to view the Orders</button>
         <>
@@ -26,15 +27,16 @@ function Order() {
             return (
                 <>
                 <p>Bill: {order.bill}</p>
-                
+                <div className = {styles.itemCard}>
                 <p>{order.items.map((item) => {
                     return(
                         <>
                         <p>{item.name} {item.quantity} pieces</p>
-                        <p>{item.price} per pieces</p>   
+                        <p>Price: {item.price} per pieces</p>   
                         </>                    
                     )
-                })} </p>               
+                })} </p>  
+                </div>             
                </> 
             )
         })            

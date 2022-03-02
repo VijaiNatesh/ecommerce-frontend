@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { registerUser } from '../redux/action/userAction';
+import styles from '../../src/myStyles.module.css'
 
 function User() {
 
@@ -25,15 +26,23 @@ function User() {
         setPassword("")
     }
     return (
-        <div>
-            <form >
-                <label>Name</label>
+        <div className = {styles.register}>
+            <form>
+                <div className = {styles.formlabel}>
+                <label>Name:</label>
                 <input type = "text" value = {name} onChange = {(e) => setName(e.target.value)}/><br/>
-                <label>Email</label>
+                </div>
+                <div className = {styles.formlabel}>
+                <label className = {styles.formlabel}>Email:</label>
                 <input type = "mail" value = {email} onChange = {(e) => setEmail(e.target.value)}/><br/>
-                <label>Password</label>
+                </div>
+                <div className = {styles.formlabel}>
+                <label className = {styles.formlabel}>Password:</label>
                 <input type = "password" value = {password} onChange = {(e) => setPassword(e.target.value)}/><br/>
+                </div>
+                <div className = {styles.formlabel}>
                <button onClick = {submitHandler}> Register </button>
+               </div>
                 </form>
                 <p>{newUser}</p>
         </div>

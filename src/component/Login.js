@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { loginUser } from '../redux/action/userAction';
 import {useNavigate} from 'react-router-dom'
+import styles from '../../src/myStyles.module.css'
 
 function Login() {
 
@@ -26,13 +27,19 @@ function Login() {
         navigate("/")
     }
     return (
-        <div>
+        <div className = {styles.register}>
            <form>
+               <div className ={ styles.formlabel}>
                <label>Email</label>
                <input type = "email" value = {email} onChange = {(e) => setEmail(e.target.value)} /><br/>
+               </div>
+               <div className ={ styles.formlabel}>
                <label>Password</label>
                <input type = "password" value = {password} onChange = {(e) => setPassword(e.target.value)} /><br/>
+               </div>
+               <div className ={ styles.formlabel}>
                <button onClick = {submitHandler}> Login </button>
+               </div>
                </form>               
         </div>
     )

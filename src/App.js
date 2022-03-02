@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '../src/myStyles.module.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import User from '../src/component/User'
 import Navigation from './component/Navigation';
@@ -12,8 +11,7 @@ import Logout from './component/Logout';
 
 function App() {
   return (
-    <div className={styles.app}>    
-      E-Commerce Website
+    <div>      
       <Navigation/>
       <BrowserRouter>
         <Routes>
